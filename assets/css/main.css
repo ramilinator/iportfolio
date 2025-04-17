@@ -104,58 +104,6 @@ h6 {
   font-weight: normal;
 }
 
-/* PHP Email Form Messages
-------------------------------*/
-.php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: var(--surface-color);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
-  animation: php-email-form-loading 1s linear infinite;
-}
-
-@keyframes php-email-form-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -706,16 +654,18 @@ section:nth-child(even) {
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 10%;
+  opacity: 85%;
   background: url('../img/desktop-bg.jpg') center no-repeat;
   background-size: cover;
-  filter: grayscale(1);
+  background-blend-mode: darken;
+  /* filter: grayscale(1); */
   z-index: -2;
 }
 
 .hero .container {
   position: relative;
   padding-block: 96px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -736,7 +686,7 @@ section:nth-child(even) {
 .hero-heading {
   font-size: var(--font-size-heading-1);
   line-height: var(--font-size-heading-1);
-  color: var(--surface-color);
+  color: var(--contrast-color);
 }
 
 .hero-heading .thin {
@@ -751,7 +701,7 @@ section:nth-child(even) {
 .hero p {
   font-family: var(--default-font-thin);
   font-size: var(--font-size-heading-3);
-  color: var(--surface-color);
+  color: var(--contrast-color);
 }
 
 .hero-visual {
@@ -774,6 +724,7 @@ section:nth-child(even) {
 .hero-visual-info {
   width: 100%;
   padding: var(--spacing);
+  background: var(--accent-color);
 }
 
 .hero-visual-info h2 {
@@ -976,7 +927,7 @@ a.button {
 }
 
 .section-title span {
-  color: var(--accent-color);
+  color: var(--default-color);
 }
 
 @media (min-width: 768px) {
